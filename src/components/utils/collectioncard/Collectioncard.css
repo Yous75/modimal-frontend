@@ -1,0 +1,40 @@
+.collectioncard {
+  width: 100%;
+  height: 100%;
+}
+
+.collectioncard__frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.collectioncard__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collectioncard__label {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  background: white;
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 20px;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .collectioncard__label {
+    right: 12px;
+    bottom: 12px;
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
+}

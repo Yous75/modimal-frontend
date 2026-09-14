@@ -1,0 +1,224 @@
+.modiweek-page {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 48px 96px;
+  color: #1a1a1a;
+  background-color: transparent;
+}
+
+/* Breadcrumbs */
+.modiweek-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #8a8a8a;
+  margin-bottom: 24px;
+}
+
+.modiweek-breadcrumbs a {
+  color: #8a8a8a;
+  text-decoration: none;
+}
+
+.modiweek-breadcrumbs a:hover {
+  color: #1a1a1a;
+}
+
+.modiweek-breadcrumb-sep {
+  color: #c9c9c9;
+}
+
+.modiweek-breadcrumb-current {
+  color: #1a1a1a;
+}
+
+/* Day Title */
+.modiweek-day-heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  margin: 0 0 32px 0;
+  color: #1a1a1a;
+  
+}
+
+/* Hero Grid Layout */
+.modiweek-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 72px;
+  background-color: transparent;
+}
+
+.modiweek-hero-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: #f2efe9;
+}
+
+.modiweek-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right Side: Shop The Look Section */
+.modiweek-shop-look {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 4px;
+}
+
+.modiweek-shop-look-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e5e1d8;
+  background-color: transparent;
+}
+
+.modiweek-shop-look-title h2 {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: none;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.modiweek-shop-look-title span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+}
+
+/* Product Cards Grid */
+.modiweek-product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+ 
+}
+
+/* Weekly Strip Horizontal Scroll */
+.modiweek-week-strip {
+  border-top: 1px solid #e5e1d8;
+  padding-top: 32px;
+  height:fit-content;
+}
+
+.modiweek-week-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  height:450px;
+}
+
+.modiweek-day-card {
+  flex: 0 0 auto;
+  width: 288px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  scroll-snap-align: start;
+}
+
+.modiweek-day-card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: #f2efe9;
+}
+
+.modiweek-day-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.modiweek-day-card:hover .modiweek-day-card-image img {
+  transform: scale(1.03);
+}
+
+.modiweek-day-card-heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #1a1a1a;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.modiweek-day-card-today {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #1a1a1a;
+  color: #ffffff;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 8px;
+  
+}
+
+.modiweek-day-card-label {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight:700;
+  color: black;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  
+}
+
+.modiweek-day-card.is-active .modiweek-day-card-label {
+  border-bottom-color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* Responsive Media Query */
+@media (max-width: 900px) {
+  .modiweek-page {
+    padding: 24px 20px 64px;
+  }
+
+  .modiweek-hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .modiweek-day-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .modiweek-day-card {
+    width: 150px;
+  }
+}

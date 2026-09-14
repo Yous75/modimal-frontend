@@ -1,0 +1,362 @@
+/* ==========================================================================
+   Fall Collection Stylesheet
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Breadcrumb Navigation
+   -------------------------------------------------------------------------- */
+.fall-collection__breadcrumb {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--primary, #728267);
+  margin: 40px 99px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fall-collection__breadcrumb-divider {
+  color: var(--primary, #728267);
+}
+
+.fall-collection__breadcrumb-current {
+  color: #000000;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section
+   -------------------------------------------------------------------------- */
+.fall-collection__hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.fall-collection__hero-card {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.fall-collection__hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fall-collection__hero-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: #ffffff;
+}
+
+.fall-collection__hero-subtitle {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.fall-collection__hero-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 48px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   Main Content Layout (Sidebar + Product Grid)
+   -------------------------------------------------------------------------- */
+.fall-collection__content {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 48px;
+  align-items: start;
+  margin: 0 60px 80px 60px;
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar & Filters Section
+   -------------------------------------------------------------------------- */
+.fall-collection__sidebar {
+  position: sticky;
+  top: 20px;
+  background-color: transparent;
+  padding-right: 16px;
+}
+
+.fall-collection__sidebar-title {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0 0 32px 0;
+  color: #000000;
+  letter-spacing: -0.5px;
+}
+
+/* Applied Filter Pills Block */
+.applied-filters-block {
+  margin-bottom: 24px;
+}
+
+.applied-filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background-color: #f4f5f3;
+  border: 1px solid #e2e4e0;
+  border-radius: 16px;
+  font-size: 13px;
+  color: #333333;
+  cursor: pointer;
+}
+
+.filter-pill i {
+  font-size: 11px;
+  color: #888888;
+}
+
+.applied-filters-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clear-all-btn,
+.applied-filters-toggle {
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: #728267;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Individual Accordion Filter Section */
+.filter-section {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 18px 0;
+}
+
+.filter-section:first-of-type {
+  border-top: 1px solid #f0f0f0;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #728267; /* Sage/Olive Green tone from design */
+  cursor: pointer;
+  text-align: left;
+}
+
+.filter-header i {
+  font-size: 14px;
+  color: #728267;
+}
+
+.filter-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 16px;
+}
+
+/* Checkbox and Radio Filter Options */
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #222222;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-option input[type="checkbox"],
+.filter-option input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #b0b0b0;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  margin: 0;
+}
+
+.filter-option input[type="radio"] {
+  border-radius: 50%;
+}
+
+.filter-option input[type="checkbox"]:checked::before,
+.filter-option input[type="radio"]:checked::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #728267;
+  border-radius: 1px;
+}
+
+.filter-option input[type="radio"]:checked::before {
+  border-radius: 50%;
+}
+
+/* Color Filter Swatches Grid */
+.filter-section:has(.filter-option-color) .filter-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter-option-color {
+  position: relative;
+  font-size: 0; /* Hides default color text labels */
+}
+
+.filter-option-color input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.color-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.filter-option-color input[type="checkbox"]:checked + .color-dot {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #728267;
+}
+
+/* --------------------------------------------------------------------------
+   Product Grid & Empty/Loading States
+   -------------------------------------------------------------------------- */
+.fall-collection__grid-section {
+  width: 100%;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px 32px;
+  margin-bottom: 40px;
+}
+
+.fall-collection__status,
+.fall-collection__empty {
+  text-align: center;
+  padding: 60px 0;
+  font-size: 16px;
+  color: #666666;
+}
+
+.fall-collection__empty p {
+  margin-bottom: 16px;
+}
+
+.fall-collection__load-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.fall-collection__load-more {
+  padding: 12px 36px;
+  background-color: transparent;
+  border: 1px solid #111111;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.fall-collection__load-more:hover {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Layout Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .fall-collection__breadcrumb {
+    margin: 24px 32px;
+  }
+
+  .fall-collection__content {
+    grid-template-columns: 260px 1fr;
+    gap: 32px;
+    margin: 0 32px 60px 32px;
+  }
+
+  .fall-collection__hero-card {
+    height: 400px;
+  }
+
+  .fall-collection__hero-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fall-collection__hero {
+    grid-template-columns: 1fr;
+  }
+
+  .fall-collection__hero-card {
+    height: 320px;
+  }
+
+  .fall-collection__content {
+    grid-template-columns: 1fr;
+    margin: 0 20px 40px 20px;
+  }
+
+  .fall-collection__sidebar {
+    position: static;
+    padding-right: 0;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}

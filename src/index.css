@@ -1,0 +1,41 @@
+*{
+  padding:0;
+  margin:0;
+  text-decoration:none;
+  list-style:none;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+:root{
+  --neutral-gray:#404040;
+  --primary-green:#5A6D57;
+  --primary50:#D1D9CF;
+  --primary25:#F0F2EF;
+  --neutral-gray-cbcb:#CBCBCB;
+  --primary-600:#5A6D57;
+  --primary-800:#272F25;
+  --primary:#748C70;
+
+  /* ---- Theme tokens (light mode) ----
+     These are the "big knobs" for the site's two themes. Most of the
+     actual dark-mode colors live in src/darkMode.css (one rule per
+     component, generated from the real design), but these four are
+     used as a site-wide safety net so no page can ever show a raw
+     white/black default. Feel free to retint them. */
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --card-background: #ffffff;
+  --border-color: #e5e5e5;
+}
+
+html.dark{
+  --bg-color: #121212;
+  --text-color: #eaeaea;
+  --card-background: #1c1c1c;
+  --border-color: #3a3a3a;
+}
+
+html.dark body{
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}

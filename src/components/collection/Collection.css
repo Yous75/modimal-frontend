@@ -1,0 +1,57 @@
+.collection {
+  width:83%;
+  margin: 0 auto;
+  padding: 56px 24px;
+}
+
+.collection__title {
+  margin: 0 0 24px;
+  text-align: left;
+  font-size: 32px;
+  font-weight: 600;
+  color: black;
+}
+
+.collection__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: start;
+}
+
+.collection__col {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.collectioncard--blouses {
+  aspect-ratio: 12 / 10;
+}
+
+.collectioncard--dresses {
+  aspect-ratio: 9 / 13;
+}
+
+.collectioncard--pants {
+  aspect-ratio: 9 / 12;
+}
+
+.collectioncard--outwear {
+  aspect-ratio: 4 / 3;
+}
+
+@media (max-width: 768px) {
+  .collection {
+    padding: 40px 16px;
+  }
+
+  .collection__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collectioncard--dresses,
+  .collectioncard--pants {
+    aspect-ratio: 3 / 4;
+  }
+}

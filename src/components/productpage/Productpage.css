@@ -1,0 +1,852 @@
+
+/* ===========================================================
+   MODIMAL — Product Details Page
+   Light and Dark Mode
+   =========================================================== */
+
+/* ===========================================================
+   1. COLOR TOKENS — LIGHT MODE
+   =========================================================== */
+
+.pb-page {
+  --sage: #6b7f68;
+  --sage-dark: #55665a;
+  --sage-light: #eef1ec;
+
+  --ink: #30372e;
+  --ink-muted: #767d72;
+
+  --surface: #ffffff;
+  --surface-alt: #f5f6f3;
+  --surface-soft: #eef1ec;
+
+  --border: #dce1d9;
+  --border-light: #e5e8e2;
+
+  --text-on-sage: #ffffff;
+  --warning: #a35b4d;
+
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 28px 70px 70px;
+
+  color: var(--ink);
+  background-color: var(--surface);
+
+  box-sizing: border-box;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.pb-page *,
+.pb-page *::before,
+.pb-page *::after {
+  box-sizing: border-box;
+}
+
+/* ===========================================================
+   2. DARK MODE — PRODUCT PAGE
+   =========================================================== */
+
+/*
+   This selector works when your dark-mode toggle adds
+   "dark-mode" to the body.
+
+   Example:
+   document.body.classList.toggle("dark-mode");
+*/
+
+html.dark .pb-page {
+  --sage: #8b9d7b;
+  --sage-dark: #718365;
+  --sage-light: #343434;
+
+  --ink: #ffffff;
+  --ink-muted: #b3b3b3;
+
+  --surface: #000000;
+  --surface-alt: #1a1a1a;
+  --surface-soft: #242424;
+
+  --border: #3a3a3a;
+  --border-light: #2b2b2b;
+
+  --text-on-sage: #ffffff;
+  --warning: #e5a095;
+
+  background-color: var(--surface);
+  color: var(--ink);
+}
+
+/*
+   Optional support if your App adds "dark" instead:
+
+   .dark .pb-page {
+     ...
+   }
+
+   Use the same variables as above if necessary.
+*/
+
+/* ===========================================================
+   3. BREADCRUMBS
+   =========================================================== */
+
+.pb-breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  margin-bottom: 28px;
+
+  color: var(--ink-muted);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.pb-breadcrumbs a {
+  color: var(--ink-muted);
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.pb-breadcrumbs a:hover {
+  color: var(--sage);
+}
+
+.pb-breadcrumb-sep {
+  color: var(--border);
+}
+
+.pb-breadcrumb-current {
+  color: var(--ink-muted);
+}
+
+/* ===========================================================
+   4. MAIN PRODUCT SECTION
+   =========================================================== */
+
+.pb-product {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(300px, 0.95fr);
+
+  gap: 42px;
+  align-items: start;
+}
+
+/* ===========================================================
+   5. PRODUCT GALLERY
+   =========================================================== */
+
+.pb-gallery {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 14px;
+
+  min-width: 0;
+}
+
+.pb-thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  min-width: 0;
+}
+
+.pb-thumb {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 3 / 4;
+
+  padding: 0;
+
+  border: 1px solid transparent;
+  border-radius: 0;
+
+  overflow: hidden;
+
+  background-color: var(--surface-alt);
+
+  cursor: pointer;
+  opacity: 0.72;
+
+  transition:
+    opacity 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.pb-thumb:hover {
+  opacity: 1;
+}
+
+.pb-thumb-active {
+  border-color: var(--sage);
+  opacity: 1;
+}
+
+.pb-thumb img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* ---------- Main product image ---------- */
+
+.pb-main-image {
+  width: 100%;
+  min-width: 0;
+
+  aspect-ratio: 3 / 4;
+
+  overflow: hidden;
+
+  background-color: var(--surface-alt);
+}
+
+.pb-main-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* ===========================================================
+   6. PRODUCT DETAILS
+   =========================================================== */
+
+.pb-details {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  min-width: 0;
+  padding-top: 2px;
+}
+
+.pb-title {
+  margin: 0 0 13px;
+
+  color: var(--ink);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(24px, 2.2vw, 34px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.4px;
+}
+
+.pb-subtitle {
+  max-width: 470px;
+
+  margin: 0 0 16px;
+
+  color: var(--ink-muted);
+
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.pb-price {
+  margin: 0 0 23px;
+
+  color: var(--ink);
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+}
+
+.pb-description {
+  margin: 0 0 24px;
+
+  color: var(--ink-muted);
+
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* ===========================================================
+   7. SECTION LABELS
+   =========================================================== */
+
+.pb-section-label {
+  display: block;
+
+  margin-bottom: 11px;
+
+  color: var(--ink);
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+}
+
+/* ===========================================================
+   8. COLOR OPTIONS
+   =========================================================== */
+
+.pb-colors {
+  margin-bottom: 24px;
+}
+
+.pb-color-swatches {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pb-swatch {
+  position: relative;
+
+  width: 18px;
+  height: 18px;
+
+  padding: 0;
+
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    outline-color 0.2s ease;
+}
+
+.pb-swatch:hover {
+  transform: scale(1.08);
+}
+
+.pb-swatch-active {
+  outline: 1px solid var(--sage);
+  outline-offset: 3px;
+}
+
+/* ===========================================================
+   9. SIZE SELECTOR
+   =========================================================== */
+
+.pb-size-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 9px;
+}
+
+.pb-size-row .pb-section-label {
+  margin-bottom: 0;
+}
+
+.pb-size-select {
+  width: 100%;
+  height: 42px;
+
+  padding: 0 14px;
+
+  border: 1px solid var(--border);
+  border-radius: 0;
+
+  outline: none;
+
+  background-color: var(--surface);
+  color: var(--ink);
+
+  font-family: inherit;
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.pb-size-select:hover,
+.pb-size-select:focus {
+  border-color: var(--sage);
+}
+
+.pb-size-select option {
+  background-color: var(--surface);
+  color: var(--ink);
+}
+
+.pb-size-warning {
+  margin: 9px 0 0;
+
+  color: var(--warning);
+
+  font-size: 11px;
+}
+
+/* ===========================================================
+   10. ADD TO CART BUTTON
+   =========================================================== */
+
+.pb-add-to-cart {
+  width: 100%;
+  min-height: 42px;
+
+  margin-top: 13px;
+  padding: 12px 20px;
+
+  border: 1px solid var(--sage);
+  border-radius: 0;
+
+  background-color: var(--sage);
+  color: var(--text-on-sage);
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.pb-add-to-cart:hover {
+  background-color: var(--sage-dark);
+  border-color: var(--sage-dark);
+}
+
+.pb-add-to-cart:active {
+  transform: translateY(1px);
+}
+
+/* ===========================================================
+   11. EASY RETURN + WISHLIST
+   =========================================================== */
+
+.pb-sub-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  margin-top: 20px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid var(--border-light);
+}
+
+.pb-easy-return {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--ink-muted);
+
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.pb-easy-return i {
+  color: var(--ink-muted);
+  font-size: 11px;
+}
+
+.pb-wishlist-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: var(--ink-muted);
+
+  font-family: inherit;
+  font-size: 10px;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.pb-wishlist-btn:hover {
+  color: var(--sage);
+}
+
+.pb-wishlist-btn i {
+  font-size: 12px;
+}
+
+/* ===========================================================
+   12. FABRIC INFORMATION
+   =========================================================== */
+
+.pb-fabric {
+  margin: 20px 0 0;
+  padding: 18px 20px;
+
+  border: 1px solid var(--border);
+
+  background-color: var(--surface-alt);
+  color: var(--ink-muted);
+
+  font-size: 12px;
+  line-height: 1.8;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* ===========================================================
+   13. RELATED PRODUCTS
+   =========================================================== */
+
+.pb-recommendations {
+  margin-top: 62px;
+}
+
+.pb-recs-title {
+  margin: 0 0 23px;
+
+  color: var(--ink);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.pb-recs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.pb-rec-card {
+  display: block;
+
+  min-width: 0;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.pb-rec-image-wrap {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 3 / 4;
+
+  margin-bottom: 13px;
+
+  overflow: hidden;
+
+  background-color: var(--surface-alt);
+}
+
+.pb-rec-image-wrap img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.35s ease;
+}
+
+.pb-rec-card:hover .pb-rec-image-wrap img {
+  transform: scale(1.035);
+}
+
+.pb-rec-name {
+  margin: 0 0 8px;
+
+  color: var(--ink);
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.pb-rec-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+
+  margin-bottom: 11px;
+}
+
+.pb-rec-collection {
+  min-width: 0;
+
+  color: var(--ink-muted);
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.pb-rec-price {
+  flex-shrink: 0;
+
+  color: var(--ink);
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.pb-rec-colors {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.pb-rec-color-dot {
+  display: block;
+
+  width: 13px;
+  height: 13px;
+
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 50%;
+}
+
+/* ===========================================================
+   14. KEYBOARD ACCESSIBILITY
+   =========================================================== */
+
+.pb-page button:focus-visible,
+.pb-page a:focus-visible,
+.pb-page select:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 3px;
+}
+
+/* ===========================================================
+   15. LOADING AND ERROR STATES
+   =========================================================== */
+
+.pb-page > .pb-description {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.pb-page > .pb-description a {
+  color: var(--sage);
+  text-decoration: underline;
+}
+
+/* ===========================================================
+   16. RESPONSIVE DESIGN — LARGE TABLETS
+   =========================================================== */
+
+@media (max-width: 1100px) {
+  .pb-page {
+    padding: 28px 40px 60px;
+  }
+
+  .pb-product {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(280px, 0.9fr);
+
+    gap: 28px;
+  }
+
+  .pb-gallery {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .pb-recs-grid {
+    gap: 14px;
+  }
+}
+
+/* ===========================================================
+   17. RESPONSIVE DESIGN — TABLETS
+   =========================================================== */
+
+@media (max-width: 800px) {
+  .pb-page {
+    padding: 24px 25px 50px;
+  }
+
+  .pb-product {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .pb-gallery {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .pb-details {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .pb-title {
+    font-size: 30px;
+  }
+
+  .pb-recommendations {
+    margin-top: 48px;
+  }
+
+  .pb-recs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 16px;
+  }
+}
+
+/* ===========================================================
+   18. RESPONSIVE DESIGN — MOBILE
+   =========================================================== */
+
+@media (max-width: 500px) {
+  .pb-page {
+    padding: 18px 16px 40px;
+  }
+
+  .pb-breadcrumbs {
+    gap: 6px;
+    margin-bottom: 20px;
+    font-size: 10px;
+  }
+
+  .pb-gallery {
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 9px;
+  }
+
+  .pb-thumbnails {
+    gap: 7px;
+  }
+
+  .pb-product {
+    gap: 28px;
+  }
+
+  .pb-title {
+    margin-bottom: 11px;
+    font-size: 26px;
+  }
+
+  .pb-subtitle {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .pb-price {
+    margin-bottom: 18px;
+  }
+
+  .pb-description {
+    font-size: 11px;
+  }
+
+  .pb-sub-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .pb-fabric {
+    padding: 15px;
+  }
+
+  .pb-recommendations {
+    margin-top: 40px;
+  }
+
+  .pb-recs-title {
+    margin-bottom: 18px;
+    font-size: 21px;
+  }
+
+  .pb-recs-grid {
+    gap: 24px 12px;
+  }
+
+  .pb-rec-image-wrap {
+    margin-bottom: 10px;
+  }
+
+  .pb-rec-name {
+    font-size: 11px;
+  }
+
+  .pb-rec-collection,
+  .pb-rec-price {
+    font-size: 9px;
+  }
+
+  .pb-rec-meta {
+    gap: 5px;
+  }
+}
+
+/* ===========================================================
+   19. RESPONSIVE DESIGN — SMALL MOBILE
+   =========================================================== */
+
+@media (max-width: 350px) {
+  .pb-page {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .pb-gallery {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .pb-title {
+    font-size: 23px;
+  }
+
+  .pb-recs-grid {
+    gap: 20px 10px;
+  }
+}
+
+/* ===========================================================
+   20. REDUCED MOTION
+   =========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .pb-page *,
+  .pb-page *::before,
+  .pb-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

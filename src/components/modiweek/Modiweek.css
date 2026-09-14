@@ -1,0 +1,94 @@
+.modiweek {
+  --modiweek-gap: 20px;
+  --modiweek-card-width: 25%;
+  --modiweek-ink: #1a1a1a;
+
+  padding: 48px 40px 56px;
+  background: #ffffff;
+}
+
+.modiweek__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  margin-left:99px;
+  width:83%;
+}
+
+.modiweek__heading {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--modiweek-ink);
+}
+
+.modiweek__controls {
+  display: flex;
+  gap: 8px;
+  
+}
+
+.modiweek__arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #e0e0e0;
+  background: #ffffff;
+  color: var(--modiweek-ink);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.modiweek__arrow:hover {
+  background: #f5f5f5;
+  border-color: #1a1a1a;
+}
+
+.modiweek__track {
+  display: flex;
+  gap: var(--modiweek-gap);
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  /* Hide native scrollbars */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  width:83%;
+  margin-left:99px;
+  height:66vh;
+}
+
+.modiweek__track::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.modiweek__item {
+  flex: 0 0 auto;
+  width: var(--modiweek-card-width);
+}
+
+@media (max-width: 1024px) {
+  .modiweek {
+    padding: 40px 24px 48px;
+    --modiweek-card-width: 200px;
+  }
+}
+
+@media (max-width: 640px) {
+  .modiweek {
+    padding: 32px 16px 40px;
+    --modiweek-card-width: 58vw;
+    --modiweek-gap: 14px;
+  }
+
+  .modiweek__heading {
+    font-size: 22px;
+  }
+}

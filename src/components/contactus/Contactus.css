@@ -1,0 +1,278 @@
+.contactus {
+  width: 85%;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+  font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+  color: #2b2b2b;
+ 
+}
+
+/* Breadcrumb */
+.contactus-breadcrumb {
+  font-size: 18px;
+  font-weight:400;
+  color: #8a8a8a;
+  margin-bottom: 18px;
+}
+
+.contactus-breadcrumb a {
+  color: #8a8a8a;
+  text-decoration: none;
+}
+
+.contactus-breadcrumb a:hover {
+  color: #5a6b5c;
+}
+
+.contactus-breadcrumb .separator {
+  margin: 0 8px;
+}
+
+.contactus-breadcrumb .current {
+  color: #2b2b2b;
+}
+
+/* Title */
+.contactus-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+
+/* Intro banner */
+.contactus-banner {
+  background-color: #f2f2f0;
+  padding: 24px 28px;
+  border-radius: 4px;
+  margin-bottom: 40px;
+}
+
+.contactus-banner p {
+  font-size: 16px;
+  font-weight:400;
+  line-height: 1.8;
+  margin: 0 0 14px;
+  color: #4a4a4a;
+}
+
+.contactus-banner p:last-child {
+  margin-bottom: 0;
+}
+
+.contactus-banner a {
+  color: #4a4a4a;
+  text-decoration: underline;
+}
+
+/* Form section */
+.contactus-form-section {
+  width:80%;
+  margin: 0 auto 50px;
+ 
+}
+
+.write-us-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 30px;
+}
+
+.write-us-heading i {
+  font-size: 18px;
+}
+
+.your-information {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  color: #2b2b2b;
+}
+
+.contactus-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field {
+  margin-bottom: 22px;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #d6d6d3;
+  background: transparent;
+  padding: 10px 2px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #2b2b2b;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.form-field select {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23555'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 2px center;
+  background-size: 18px;
+  cursor: pointer;
+  color: #6a6a6a;
+}
+
+.form-field select:valid {
+  color: #2b2b2b;
+}
+
+.form-field input::placeholder {
+  color: #9a9a9a;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-bottom-color: #5a6b5c;
+}
+
+/* Checkbox */
+.privacy-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: #4a4a4a;
+  margin-bottom: 26px;
+  cursor: pointer;
+}
+
+.privacy-check input {
+  margin-top: 2px;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  accent-color: #5a6b5c;
+  cursor: pointer;
+}
+
+/* Submit */
+.submit-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.send-btn {
+  background-color: #5a6b5c;
+  color: #fff;
+  border: none;
+  padding: 12px 40px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+  width:288px;
+}
+
+.send-btn:hover {
+  background-color: #47554a;
+}
+
+/* Bottom cards */
+.contactus-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background-color: #f2f2f0;
+  border-radius: 4px;
+  padding: 40px 20px;
+}
+
+.contact-card {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.contact-card .card-icon {
+  font-size: 26px;
+  color: #2b2b2b;
+  margin-bottom: 14px;
+  margin-left:150px;
+}
+
+.contact-card h4 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.contact-card p {
+  font-size: 13px;
+  color: #6a6a6a;
+  margin: 0 0 18px;
+}
+
+.card-btn,
+.card-box {
+  display: inline-block;
+  width: 100%;
+  max-width: 220px;
+  padding: 10px 16px;
+  font-size: 13px;
+  border: 1px solid #d6d6d3;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #2b2b2b;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.card-btn {
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.card-btn:hover {
+  background-color: #5a6b5c;
+  color: #fff;
+  border-color: #5a6b5c;
+}
+
+.card-box {
+  font-weight: 500;
+  cursor: default;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contactus-cards {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-card {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactus-title {
+    font-size: 24px;
+  }
+
+  .contactus-banner {
+    padding: 18px 16px;
+  }
+
+  .submit-row {
+    justify-content: stretch;
+  }
+
+  .send-btn {
+    width: 100%;
+  }
+}

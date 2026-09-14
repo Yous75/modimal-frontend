@@ -1,0 +1,39 @@
+.hero{
+    background-image: url("../../assets/hero.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    height:80vh;
+    display:flex;
+    align-items:center ;
+    
+}
+.hero-container{
+    height:fit-content;
+    width:100%;
+    margin-left:90px;
+    transform:translateY(100px);
+}
+.hero > .hero-container > h2{
+    width:25%;
+    font-weight:400;
+    font-size:34px;
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    margin-bottom:18px;
+    line-height: 1.8;
+}
+
+.hero > .hero-container > button{
+    background-color:white;
+    width:14%;
+    margin-top:20px;
+    height:40px;
+    font-weight:400;
+    font-size:14px;
+    border:none;
+    cursor:pointer;
+}
+.hero > .hero-container > button:hover{
+    background-color:rgb(246, 229, 208);
+}

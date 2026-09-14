@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-bg-light: #fcfbf9;
+  --color-bg-card: #ece9e2;
+  --color-sage: #596c5d;
+  --color-text-dark: #222222;
+  --color-text-muted: #666666;
+  --color-border: #e2dfd7;
+}
+
+.refunds-container {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Header */
+.refunds-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 60px 80px 40px 80px;
+  border-bottom: 1px solid var(--color-border);
+  background: transparent;
+}
+
+.header-left .subtitle {
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.header-left .title {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+  color: var(--color-text-dark);
+}
+
+.header-left .last-updated {
+  font-size: 13px;
+  margin: 0;
+}
+
+.header-right {
+  max-width: 420px;
+  background: transparent;
+}
+
+.header-right p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555555;
+  margin-bottom:50px;
+  background: transparent;
+  text-align: left;
+}
+
+/* Policy Grid */
+.policy-grid-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 60px 80px;
+  gap: 60px;
+}
+
+.section-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  display: block;
+  margin-bottom: 24px;
+}
+
+.policy-intro, .card-intro {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444444;
+  margin-bottom: 24px;
+}
+
+.check-list, .cross-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.check-list li, .cross-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+  margin-bottom: 14px;
+}
+
+.check-icon {
+  color: var(--color-text-dark);
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.cross-icon {
+  color: #888888;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.policy-note {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 20px;
+}
+
+.right-col-card {
+  background-color: var(--color-bg-card);
+  padding: 48px;
+  border-radius: 2px;
+}
+
+/* Process Banner (Sage Green) */
+.process-banner {
+  background-color: var(--color-sage);
+  color: #ffffff;
+  padding: 70px 80px;
+}
+
+.process-subtitle {
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.process-title {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 400;
+  margin: 0 0 50px 0;
+  color: #ffffff;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+.step-card {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  padding-left: 20px;
+}
+
+.step-card:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.step-num {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  color: rgba(255, 255, 255, 0.35);
+  display: block;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.step-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+}
+
+.step-card p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* 3 Details Columns */
+.details-columns-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 70px 80px;
+}
+
+.detail-col {
+  border-top: 1px solid var(--color-text-dark);
+  padding-top: 24px;
+}
+
+.detail-col h3 {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 0 16px 0;
+}
+
+.detail-col p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Shipping Callout */
+.shipping-callout {
+  background-color: var(--color-bg-card);
+  margin: 0 80px 70px 80px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.shipping-icon {
+  font-size: 20px;
+  color: var(--color-text-dark);
+}
+
+.shipping-callout p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #444444;
+  margin: 0;
+}
+
+/* Questions CTA */
+.questions-section {
+  background-color: var(--color-bg-card);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.questions-section h2 {
+  font-family: var(--font-serif);
+  font-size: 34px;
+  font-weight: 400;
+  margin: 0 0 12px 0;
+}
+
+.questions-section p {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin: 0 0 28px 0;
+}
+
+.contact-btn {
+  background-color: var(--color-sage);
+  color: #ffffff;
+  border: none;
+  padding: 16px 36px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.contact-btn:hover {
+  background-color: #48584b;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .refunds-header, .policy-grid-section, .process-banner, .details-columns-section {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .shipping-callout {
+    margin: 0 40px 50px 40px;
+  }
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .step-card {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .refunds-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+  .policy-grid-section {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+  .process-banner {
+    padding: 50px 20px;
+  }
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  .details-columns-section {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+  .shipping-callout {
+    margin: 0 20px 40px 20px;
+  }
+}
