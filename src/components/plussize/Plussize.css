@@ -388,48 +388,51 @@
    Responsive
    ------------------------------------------------------------------- */
 @media (max-width: 900px) {
+  .plussize-breadcrumb {
+    margin: 24px;
+    padding: 0;
+    font-size: 15px;
+    flex-wrap: wrap;
+  }
+
+  .plussize-hero img {
+    width: 100%;          /* was 100vw, which overflowed */
+    height: 320px;
+  }
+
   .plussize-body {
     grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 24px;      /* was 90px, which squeezed the cards */
   }
 
   .plussize-sidebar {
     position: static;
   }
-
-  .plussize-hero img {
-    height: 320px;
-  }
 }
 
 @media (max-width: 600px) {
-  .plussize-page {
-    padding: 0 16px 48px;
+  .plussize-breadcrumb {
+    margin: 18px 16px;
+    font-size: 14px;
   }
 
-  .plussize-hero {
+  .plussize-hero { margin-bottom: 24px; }
+  .plussize-hero img { height: 260px; }
+
+  /* same 16px side spacing as New In and Best Seller */
+  .plussize-body { padding: 0 16px 48px; }
+
+  /* one full-width column */
+  .plussize-page .product-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
-  .plussize-hero img {
-    height: 280px;
+  .plussize-page .product-image-wrap {
+    aspect-ratio: 3 / 4;  /* was 2 / 4, much taller than the other cards */
   }
 
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px 12px;
-  }
-
-  .product-title {
-    font-size: 13px;
-  }
-
-  .product-price {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 380px) {
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
+  .plussize-page .product-title { font-size: 13px; }
+  .plussize-page .product-price { font-size: 13px; }
 }
