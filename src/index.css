@@ -57,7 +57,7 @@ html.dark body{
 }
 /* ============ PRODUCT GRIDS: ONE COLUMN ON PHONES ============ */
 
-/* Shop All: undo the fixed width/offset once the sidebar stacks */
+
 @media (max-width: 1100px) {
   .shopall-content .shopall-grid-section {
     width: 100%;
@@ -67,7 +67,7 @@ html.dark body{
 
 @media (max-width: 600px) {
   .shopall-content .product-grid,
-  .plussize-page .product-grid,
+  .plussize .product-grid,
   .fall-collection__content .product-grid,
   .modiweek-page .modiweek-product-grid,
   .category-page .category-grid,
