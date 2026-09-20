@@ -37,3 +37,66 @@
 .hero > .hero-container > button:hover{
     background-color:rgb(246, 229, 208);
 }
+/* ======================= RESPONSIVE ======================= */
+
+@media (max-width: 1024px) {
+  .hero { height: 60vh; }
+  .hero-container {
+    width: auto;
+    flex: 1;
+    min-width: 0;
+    margin-left: 40px;
+    margin-right: 40px;
+    transform: translateY(60px);
+  }
+  .hero > .hero-container > h2 { width: 45%; font-size: 28px; line-height: 1.6; }
+  .hero > .hero-container > button { width: 160px; }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    position: relative;
+    height: 70vh;
+    min-height: 420px;
+    align-items: flex-end;
+    padding-bottom: 36px;
+    background-position: 58% center;
+  }
+
+  /* dark fade at the bottom so the light text is always readable */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.25) 45%,
+      rgba(0, 0, 0, 0) 75%
+    );
+  }
+
+  .hero-container {
+    position: relative;
+    z-index: 1;
+    margin: 0 24px;
+    transform: none;
+  }
+
+  .hero > .hero-container > h2 {
+    width: 100%;
+    max-width: 420px;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #F6E5D0;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  }
+  .hero > .hero-container > button { width: 150px; margin-top: 12px; }
+}
+
+@media (max-width: 480px) {
+  .hero { min-height: 460px; padding-bottom: 28px; }
+  .hero-container { margin: 0 18px; }
+  .hero > .hero-container > h2 { font-size: 21px; margin-bottom: 8px; }
+  .hero > .hero-container > button { width: 140px; height: 38px; }
+}

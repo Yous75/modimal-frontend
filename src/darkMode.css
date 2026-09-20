@@ -36,7 +36,9 @@
    ============================================================================ */
 
 /* ===== components/bestsellerpage/Bestsellerpage.css ===== */
-
+ html.dark .hero .hero-container button{
+  color:white;
+ }
 html.dark .best-seller-page {
   background: #121212;
   color: #f0f0f0;
