@@ -17,14 +17,12 @@ footer{
 .join > p >i{
     color:white;
 }
-h3{
-   
+footer h3 {
     font-weight:700;
     font-size:20px;
     margin-bottom:20px;
 }
-form{
-   
+footer form {
     margin-bottom:90px;
 }
 .socials{
@@ -143,4 +141,43 @@ form{
     border:1px solid white;
     padding:15px;
     background-color:var(--primary-600);
+}
+/* ======================= RESPONSIVE ======================= */
+
+@media (max-width: 1024px) {
+  footer {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 48px;
+    padding: 40px 40px 24px;
+  }
+  .join { width: 45%; height: auto; }
+  .join-up { width: auto; height: auto; }
+  footer form { margin-bottom: 40px; }
+  .join-up > i {
+    position: static;
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer { flex-direction: column; gap: 36px; padding: 36px 24px 24px; }
+  .join { width: 100%; }
+  .about > h3,
+  .help > h3,
+  .join-up > h3 { font-size: 18px; margin-bottom: 18px; }
+  .about > ul > li,
+  .help > ul > li,
+  .join-up > ul > li { font-size: 16px; margin-bottom: 12px; }
+  footer form { margin-bottom: 28px; }
+}
+
+@media (max-width: 480px) {
+  footer { padding: 28px 16px 20px; gap: 28px; }
+  footer h3 { font-size: 17px; }
+  .email-box > input { padding-left: 14px; font-size: 14px; }
+  .socials { gap: 16px; margin-bottom: 28px; }
+  .socials > i { font-size: 20px; }
+  .agreement > span { font-size: 13px; }
 }
