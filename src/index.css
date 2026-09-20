@@ -55,3 +55,31 @@ html.dark body{
   background-color: var(--bg-color);
   color: var(--text-color);
 }
+/* ============ PRODUCT GRIDS: ONE COLUMN ON PHONES ============ */
+
+/* Shop All: undo the fixed width/offset once the sidebar stacks */
+@media (max-width: 1100px) {
+  .shopall-content .shopall-grid-section {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .shopall-content .product-grid,
+  .plussize-page .product-grid,
+  .fall-collection__content .product-grid,
+  .modiweek-page .modiweek-product-grid,
+  .category-page .category-grid,
+  .wishlist__grid,
+  .bestsellers__grid,
+  .search-results__grid,
+  .new-in-page__grid,
+  .best-seller-page__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-page .category-grid {
+    width: 100%;
+  }
+}
