@@ -567,3 +567,76 @@ header a {
   color: var(--primary-green, #4b5e4a);
 
 }
+/* ======================= RESPONSIVE ======================= */
+
+@media (max-width: 1100px) {
+  .header { padding: 0 40px; }
+  .header > nav > ul { gap: 18px; }
+  .header > nav > ul > li { font-size: 16px; }
+  .header-icons { gap: 16px; }
+  .search-bar-content { padding: 18px 40px; }
+  .mega-menu-columns { gap: 32px; }
+  .mega-menu-card img { width: 200px; height: 300px; }
+}
+
+@media (max-width: 900px) {
+  /* Two-row header: logo + icons on top, nav scrolls underneath */
+  .header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px 20px;
+    row-gap: 10px;
+  }
+  .header > a { order: 1; }
+  .header-icons { order: 2; gap: 18px; }
+
+  .header > nav {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .header > nav::-webkit-scrollbar { display: none; }
+
+  .header > nav > ul {
+    justify-content: flex-start;
+    gap: 22px;
+    width: max-content;
+    padding-bottom: 4px;
+  }
+  .header > nav > ul > li { font-size: 15px; white-space: nowrap; }
+
+  header > div > p {
+    height: auto;
+    padding: 6px 12px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  /* Mega menu stacks and scrolls instead of overflowing the screen */
+  .mega-menu { max-height: 75vh; overflow-y: auto; }
+  .mega-menu-content { flex-direction: column; gap: 24px; padding: 20px; }
+  .mega-menu-columns { flex-wrap: wrap; gap: 28px 40px; }
+  .mega-menu-column { flex: 1 1 140px; }
+  .mega-menu-column h3 { font-size: 16px; margin-bottom: 12px; }
+  .mega-menu-images { gap: 12px; overflow-x: auto; }
+  .mega-menu-card img { width: 150px; height: 210px; }
+
+  .search-bar-content { padding: 16px 20px; gap: 10px; }
+  .search-bar-wrapper.open .search-bar-inner { max-height: 70vh; }
+}
+
+@media (max-width: 560px) {
+  .header { padding: 10px 14px; }
+  #logo { height: 34px; width: auto; }
+  .header-icons { gap: 14px; }
+  .header-icons > a > i,
+  .header-icons > button > i { height: 20px; width: 20px; font-size: 16px; }
+  .header > nav > ul { gap: 18px; }
+  .header > nav > ul > li { font-size: 14px; }
+  .mega-menu-images { display: none; }
+  .mega-menu-column { flex: 1 1 100%; }
+  .search-bar-content { padding: 14px; }
+  .search-bar-input { font-size: 15px; }
+}
