@@ -34,6 +34,17 @@ html.dark{
   --card-background: #1c1c1c;
   --border-color: #3a3a3a;
 }
+/* ---- Responsive safety net (site-wide) ---- */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video {
+  max-width: 100%;
+}
 
 html.dark body{
   background-color: var(--bg-color);
